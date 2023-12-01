@@ -1,0 +1,100 @@
+{
+  "name": "profile-page",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "h3ar7b3a7",
+  "sourceRoot": "apps/profile-page/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/profile-page",
+        "index": "apps/profile-page/src/index.html",
+        "browser": "apps/profile-page/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/profile-page/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/profile-page/src/favicon.ico",
+          "apps/profile-page/src/assets"
+        ],
+        "styles": ["apps/profile-page/src/styles.scss"],
+        "scripts": [],
+        "server": "apps/profile-page/src/main.server.ts",
+        "prerender": true,
+        "ssr": {
+          "entry": "apps/profile-page/server.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "ssr": false,
+          "prerender": false
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "profile-page:build:production"
+        },
+        "development": {
+          "buildTarget": "profile-page:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "profile-page:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/profile-page/**/*.ts",
+          "apps/profile-page/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/profile-page/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "profile-page:build",
+        "staticFilePath": "dist/apps/profile-page/browser"
+      }
+    }
+  }
+}
