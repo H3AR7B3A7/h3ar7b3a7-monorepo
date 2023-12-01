@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "serve": "npx nx serve profile-page",
-    "build": "npx nx build profile-page --configuration production"
+    "serve:profile-page": "npx nx serve profile-page",
+    "build:profile-page": "npx nx build profile-page --configuration production",
+    "lint:profile-page": "npx nx lint --fix --project profile-page"
   },
   "private": true,
   "dependencies": {

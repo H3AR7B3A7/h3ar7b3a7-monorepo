@@ -27,3 +27,12 @@ SSR: true
   "prerender": false
 }
 ```
+
+## Generate component
+
+> npx nx g @nx/angular:component home --project profile-page
+
+
+---
+
+&copy; H3AR7B3A7, December 2023
