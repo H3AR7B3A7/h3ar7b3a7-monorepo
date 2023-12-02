@@ -1,0 +1,17 @@
+.theme-light {
+  --default: #010101;
+  --back: #fefefe;
+  --primary: blue;
+  --secondary: cornflowerblue;
+  --tertiary: orange;
+  --danger: darkred;
+}
+
+.theme-dark {
+  --default: #fefefe;
+  --back: #010101;
+  --primary: lightblue;
+  --secondary: cornflowerblue;
+  --tertiary: orange;
+  --danger: red;
+}

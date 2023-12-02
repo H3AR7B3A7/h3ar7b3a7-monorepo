@@ -1,0 +1,19 @@
+.typography {
+  &__color {
+    &--default {
+      color: var(--default);
+    }
+    &--primary {
+      color: var(--primary);
+    }
+    &--secondary {
+      color: var(--secondary);
+    }
+    &--tertiary {
+      color: var(--tertiary);
+    }
+    &--danger {
+      color: var(--danger);
+    }
+  }
+}

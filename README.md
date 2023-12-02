@@ -38,6 +38,10 @@ _We shouldn't generate components directly in the project app folder, we should 
 
 > npx nx generate @nx/angular:library --name=home --directory=libs/profile-page/feature-home
 
+## Generate shared ui library
+
+> npx nx generate @nx/angular:library --name=typography --directory=libs/shared/ui-typography
+
 ---
 
 &copy; H3AR7B3A7, December 2023

@@ -52,18 +52,25 @@
   },
   "generators": {
     "@nx/angular:application": {
-      "changeDetection": "OnPush",
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "e2eTestRunner": "cypress",
+      "changeDetection": "OnPush"
     },
     "@nx/angular:library": {
+      "style": "scss",
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress",
+      "changeDetection": "OnPush"
     },
     "@nx/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress",
+      "changeDetection": "OnPush"
     }
   },
   "nxCloudAccessToken": "YWE3ZGVkMTgtZGZiZS00YmJhLTg2NjctMzBiNWY2NTQxMTY5fHJlYWQtd3JpdGU="

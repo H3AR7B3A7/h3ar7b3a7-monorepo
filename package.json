@@ -5,7 +5,7 @@
   "scripts": {
     "serve:profile-page": "npx nx serve profile-page",
     "build:profile-page": "npx nx build profile-page --configuration production",
-    "lint:profile-page": "npx nx lint --fix --project profile-page"
+    "lint": "npx nx run-many --all --target=lint --fix"
   },
   "private": true,
   "dependencies": {

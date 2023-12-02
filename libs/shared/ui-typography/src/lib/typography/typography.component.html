@@ -1,0 +1,37 @@
+<ng-container [ngSwitch]="type">
+  <ng-container class="p" *ngSwitchCase="'body'">
+    <ng-container *ngTemplateOutlet="colorTemplate"></ng-container>
+  </ng-container>
+
+  <h1 *ngSwitchCase="'header-1'">
+    <ng-container *ngTemplateOutlet="colorTemplate"></ng-container>
+  </h1>
+
+  <h2 *ngSwitchCase="'header-2'">
+    <ng-container *ngTemplateOutlet="colorTemplate"></ng-container>
+  </h2>
+
+  <h3 *ngSwitchCase="'header-3'">
+    <ng-container *ngTemplateOutlet="colorTemplate"></ng-container>
+  </h3>
+
+  <h4 *ngSwitchCase="'header-4'">
+    <ng-container *ngTemplateOutlet="colorTemplate"></ng-container>
+  </h4>
+
+  <h5 *ngSwitchCase="'header-5'">
+    <ng-container *ngTemplateOutlet="colorTemplate"></ng-container>
+  </h5>
+</ng-container>
+
+<ng-template #colorTemplate>
+  <span
+    [class.typography__color--default]="color === 'default'"
+    [class.typography__color--primary]="color === 'primary'"
+    [class.typography__color--secondary]="color === 'secondary'"
+    [class.typography__color--tertiary]="color === 'tertiary'"
+    [class.typography__color--danger]="color === 'danger'"
+  >
+    <ng-content></ng-content>
+  </span>
+</ng-template>

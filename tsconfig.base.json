@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@h3ar7b3a7/home": ["libs/profile-page/feature-home/src/index.ts"]
+      "@h3ar7b3a7/home": ["libs/profile-page/feature-home/src/index.ts"],
+      "@h3ar7b3a7/typography": ["libs/shared/ui-typography/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

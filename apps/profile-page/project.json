@@ -20,7 +20,9 @@
           "apps/profile-page/src/favicon.ico",
           "apps/profile-page/src/assets"
         ],
-        "styles": ["apps/profile-page/src/styles.scss"],
+        "styles": [
+          "apps/profile-page/src/styles.scss"
+        ],
         "scripts": [],
         "server": "apps/profile-page/src/main.server.ts",
         "prerender": true,
