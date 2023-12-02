@@ -52,6 +52,7 @@
   },
   "generators": {
     "@nx/angular:application": {
+      "changeDetection": "OnPush",
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",

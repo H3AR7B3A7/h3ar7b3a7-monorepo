@@ -28,10 +28,15 @@ SSR: true
 }
 ```
 
-## Generate component
+## Generate component in project
 
 > npx nx g @nx/angular:component home --project profile-page
 
+_We shouldn't generate components directly in the project app folder, we should rather create them in feature libraries._
+
+## Generate feature library
+
+> npx nx generate @nx/angular:library --name=home --directory=libs/profile-page/feature-home
 
 ---
 
